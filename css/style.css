@@ -1,3 +1,10 @@
+:root {
+    --dark: #19283f;
+    --green: #33d1cc;
+    --red: #ff3150;
+    --yellow: #ffc400;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,4 +13,65 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    height: 10000px;
 }
+
+/* Start of Navbar Rules */
+.navbar {
+    background-color: var(--dark);
+}
+
+#logo {
+    width: 50px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--green);
+}
+
+.navbar .search {
+    border-left: 1px solid var(--green);
+}
+
+.navbar .search svg {
+    color: var(--green);
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    border-color: white;
+    font-size: 25px;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green);
+}
+/* End of Navbar Rules */
+
+/* Start Landing Section Rules */
+.main-btn {
+    background-color: var(--red);
+    color: var(--yellow);
+    padding: 0.5rem 1rem;
+}
+
+.main-btn:hover {
+    background-color: var(--red);
+    opacity: 0.8;
+}
+
+.landing {
+    background-color: var(--dark);
+    min-height: calc(100vh - 72px);
+}
+/* End Landing Section Rules */
+

@@ -3,6 +3,7 @@
     --green: #33d1cc;
     --red: #ff3150;
     --yellow: #ffc400;
+    --section-color: #eff7fa;
 }
 
 * {
@@ -75,3 +76,87 @@ body {
 }
 /* End Landing Section Rules */
 
+/* Start Features Section Rules */
+.main-heading::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green);
+    position: absolute;
+    bottom: -20px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.features .icon-holder {
+    height: 200px;
+}
+
+.features .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .icon-holder .number{
+    font-size: 12rem;
+    color: var(--section-color);
+}
+
+.features .icon-holder .icon{
+    color: var(--green);
+}
+
+.features .feat h4 {
+    color: var(--yellow);
+}
+/* End Features Section Rules */
+
+/* Start Our Work Section Rules */
+.our-work {
+    background-color: var(--section-color);
+}
+
+.our-work ul .active {
+    background-color: var(--red);
+    color: var(--yellow);
+}
+
+.our-work ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover {
+    color: var(--red);
+}
+
+.our-work .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.our-work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgba(51 209 204 / 76%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.5s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+
+.our-work .box:hover::before {
+    transform: translateX(0);
+}
+
+.stuff .description {
+    max-width: 500px;
+}
+/* End Our Work Section Rules */
